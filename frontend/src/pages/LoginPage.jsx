@@ -128,7 +128,7 @@ export default function LoginPage() {
         setError('');
 
         try {
-            const API_URL = import.meta.env.VITE_API_URL || '/api';
+            const API_URL = import.meta.env.VITE_API_URL || (import.meta.env.DEV ? '/api' : 'https://mulex-backend-deploy.onrender.com');
             const response = await fetch(`${API_URL}/auth/login`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },

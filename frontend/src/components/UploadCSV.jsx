@@ -10,7 +10,7 @@ import { motion } from 'framer-motion';
 import { CloudUpload, FileWarning } from 'lucide-react';
 import axios from 'axios';
 
-const API_URL = import.meta.env.VITE_API_URL || '/api';
+const API_URL = import.meta.env.VITE_API_URL || (import.meta.env.DEV ? '/api' : 'https://mulex-backend-deploy.onrender.com');
 const H = { fontFamily: 'Outfit, sans-serif' };
 const B = { fontFamily: 'Sora, sans-serif' };
 
