@@ -1,0 +1,150 @@
+{
+  "suspicious_accounts": [
+    {
+      "account_id": "1001",
+      "suspicion_score": 95,
+      "detected_patterns": [
+        "cycle_length_3",
+        "passthrough_shell",
+        "round_amount_structuring",
+        "layered_chain"
+      ],
+      "ring_id": "RING_003"
+    },
+    {
+      "account_id": "1002",
+      "suspicion_score": 95,
+      "detected_patterns": [
+        "cycle_length_3",
+        "passthrough_shell",
+        "round_amount_structuring",
+        "layered_chain"
+      ],
+      "ring_id": "RING_003"
+    },
+    {
+      "account_id": "2001",
+      "suspicion_score": 95,
+      "detected_patterns": [
+        "cycle_length_4",
+        "passthrough_shell",
+        "round_amount_structuring",
+        "layered_chain"
+      ],
+      "ring_id": "RING_002"
+    },
+    {
+      "account_id": "2002",
+      "suspicion_score": 95,
+      "detected_patterns": [
+        "cycle_length_4",
+        "passthrough_shell",
+        "round_amount_structuring",
+        "layered_chain"
+      ],
+      "ring_id": "RING_002"
+    },
+    {
+      "account_id": "3001",
+      "suspicion_score": 95,
+      "detected_patterns": [
+        "cycle_length_5",
+        "passthrough_shell",
+        "round_amount_structuring",
+        "layered_chain"
+      ],
+      "ring_id": "RING_001"
+    },
+    {
+      "account_id": "1003",
+      "suspicion_score": 80,
+      "detected_patterns": [
+        "cycle_length_3",
+        "passthrough_shell",
+        "layered_chain"
+      ],
+      "ring_id": "RING_003"
+    },
+    {
+      "account_id": "2003",
+      "suspicion_score": 80,
+      "detected_patterns": [
+        "cycle_length_4",
+        "passthrough_shell",
+        "layered_chain"
+      ],
+      "ring_id": "RING_002"
+    },
+    {
+      "account_id": "2004",
+      "suspicion_score": 80,
+      "detected_patterns": [
+        "cycle_length_4",
+        "passthrough_shell",
+        "layered_chain"
+      ],
+      "ring_id": "RING_002"
+    },
+    {
+      "account_id": "3002",
+      "suspicion_score": 65,
+      "detected_patterns": [
+        "cycle_length_5",
+        "round_amount_structuring",
+        "layered_chain"
+      ],
+      "ring_id": "RING_001"
+    },
+    {
+      "account_id": "9000",
+      "suspicion_score": 60,
+      "detected_patterns": [
+        "passthrough_shell",
+        "temporal_clustering",
+        "fan_in"
+      ],
+      "ring_id": null
+    }
+  ],
+  "fraud_rings": [
+    {
+      "ring_id": "RING_001",
+      "member_accounts": [
+        "3005",
+        "3001",
+        "3002",
+        "3003",
+        "3004"
+      ],
+      "pattern_type": "cycle",
+      "risk_score": 72
+    },
+    {
+      "ring_id": "RING_002",
+      "member_accounts": [
+        "2004",
+        "2001",
+        "2002",
+        "2003"
+      ],
+      "pattern_type": "cycle",
+      "risk_score": 97
+    },
+    {
+      "ring_id": "RING_003",
+      "member_accounts": [
+        "1001",
+        "1002",
+        "1003"
+      ],
+      "pattern_type": "cycle",
+      "risk_score": 100
+    }
+  ],
+  "summary": {
+    "total_accounts_analyzed": 72,
+    "suspicious_accounts_flagged": 10,
+    "fraud_rings_detected": 3,
+    "processing_time_seconds": 0.038
+  }
+}

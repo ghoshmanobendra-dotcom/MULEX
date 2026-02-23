@@ -1,0 +1,16 @@
+﻿TP=22  FP=21  TN=458  FN=0
+Precision = 0.5116 (51.2%)
+Recall    = 1.0000 (100.0%)
+Accuracy  = 0.9581 (95.8%)
+F1-Score  = 0.6769 (67.7%)
+Total=501  GT_fraud=22  Predicted=43
+
+Caught: ['ACC_00123', 'ACC_00234', 'ACC_00345', 'ACC_00456', 'ACC_00567', 'ACC_00678', 'ACC_00789', 'ACC_00890', 'ACC_00901', 'ACC_01000', 'ACC_01001', 'ACC_01002', 'ACC_01003', 'ACC_01004', 'ACC_01005', 'ACC_01006', 'ACC_01007', 'ACC_01008', 'ACC_01009', 'ACC_01010', 'ACC_01011', 'SMURF_01']
+Missed: []
+False +: ['ACC_02000', 'ACC_02001', 'ACC_02002', 'ACC_02003', 'ACC_02004', 'ACC_02005', 'ACC_02006', 'ACC_02007', 'ACC_02008', 'ACC_02009', 'ACC_02010', 'ACC_02011', 'ACC_02012', 'ACC_02013', 'ACC_02014', 'ACC_02015', 'ACC_02016', 'ACC_02017', 'ACC_02018', 'ACC_02019', 'MERCHANT_01']
+
+MERCHANT_01 in merchants: False
+MERCHANT_01 score: 70
+MERCHANT_01 patterns: ['temporal_clustering', 'fan_in', 'smurfing_hub']
+SMURF_01 score: 85
+SMURF_01 patterns: ['temporal_clustering', 'rapid_dormancy', 'fan_in', 'smurfing_hub']

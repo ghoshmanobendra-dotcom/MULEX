@@ -1,0 +1,115 @@
+{
+  "metrics": {
+    "TP": 9,
+    "FP": 0,
+    "TN": 479,
+    "FN": 13,
+    "Precision": 1.0,
+    "Recall": 0.4091,
+    "Accuracy": 0.9741,
+    "F1_Score": 0.5806,
+    "Total_accounts": 501,
+    "GT_fraud": 22,
+    "Predicted_suspicious": 9
+  },
+  "summary": {
+    "total_accounts_analyzed": 501,
+    "suspicious_accounts_flagged": 9,
+    "fraud_rings_detected": 3,
+    "processing_time_seconds": 0.139
+  },
+  "caught_fraud": [
+    "ACC_00123",
+    "ACC_00234",
+    "ACC_00345",
+    "ACC_00456",
+    "ACC_00567",
+    "ACC_00678",
+    "ACC_00789",
+    "ACC_00890",
+    "ACC_00901"
+  ],
+  "missed_fraud": [
+    {
+      "ACC_01000": {
+        "score": 0,
+        "patterns": []
+      }
+    },
+    {
+      "ACC_01001": {
+        "score": 0,
+        "patterns": []
+      }
+    },
+    {
+      "ACC_01002": {
+        "score": 0,
+        "patterns": []
+      }
+    },
+    {
+      "ACC_01003": {
+        "score": 0,
+        "patterns": []
+      }
+    },
+    {
+      "ACC_01004": {
+        "score": 0,
+        "patterns": []
+      }
+    },
+    {
+      "ACC_01005": {
+        "score": 0,
+        "patterns": []
+      }
+    },
+    {
+      "ACC_01006": {
+        "score": 0,
+        "patterns": []
+      }
+    },
+    {
+      "ACC_01007": {
+        "score": 0,
+        "patterns": []
+      }
+    },
+    {
+      "ACC_01008": {
+        "score": 0,
+        "patterns": []
+      }
+    },
+    {
+      "ACC_01009": {
+        "score": 0,
+        "patterns": []
+      }
+    },
+    {
+      "ACC_01010": {
+        "score": 0,
+        "patterns": []
+      }
+    },
+    {
+      "ACC_01011": {
+        "score": 0,
+        "patterns": []
+      }
+    },
+    {
+      "SMURF_01": {
+        "score": 0,
+        "patterns": [
+          "legitimate_merchant"
+        ]
+      }
+    }
+  ],
+  "false_positives": []
+}

@@ -1,0 +1,38 @@
+MISSED FRAUD ACCOUNTS:
+3003: score=50, patterns=['cycle_length_5', 'layered_chain']
+3004: score=50, patterns=['cycle_length_5', 'layered_chain']
+3005: score=50, patterns=['cycle_length_5', 'layered_chain']
+6000: score=30, patterns=['temporal_clustering', 'fan_out']
+6101: score=0, patterns=['legitimate_merchant']
+6102: score=0, patterns=['legitimate_merchant']
+6103: score=0, patterns=['legitimate_merchant']
+6104: score=0, patterns=['legitimate_merchant']
+6105: score=0, patterns=['legitimate_merchant']
+6106: score=0, patterns=['legitimate_merchant']
+6107: score=0, patterns=['legitimate_merchant']
+6108: score=0, patterns=['legitimate_merchant']
+6109: score=0, patterns=['legitimate_merchant']
+6110: score=0, patterns=['legitimate_merchant']
+6111: score=0, patterns=['legitimate_merchant']
+7001: score=15, patterns=['round_amount_structuring', 'layered_chain']
+7002: score=45, patterns=['passthrough_shell', 'round_amount_structuring', 'layered_chain']
+7003: score=30, patterns=['passthrough_shell', 'layered_chain']
+7004: score=30, patterns=['passthrough_shell', 'layered_chain']
+7005: score=0, patterns=['legitimate_merchant']
+9500: score=0, patterns=['legitimate_merchant']
+9501: score=0, patterns=['legitimate_merchant']
+
+CATCHED FRAUD ACCOUNTS:
+1001: score=95, patterns=['cycle_length_3', 'passthrough_shell', 'round_amount_structuring', 'layered_chain']
+1002: score=95, patterns=['cycle_length_3', 'passthrough_shell', 'round_amount_structuring', 'layered_chain']
+1003: score=80, patterns=['cycle_length_3', 'passthrough_shell', 'layered_chain']
+2001: score=95, patterns=['cycle_length_4', 'passthrough_shell', 'round_amount_structuring', 'layered_chain']
+2002: score=95, patterns=['cycle_length_4', 'passthrough_shell', 'round_amount_structuring', 'layered_chain']
+2003: score=80, patterns=['cycle_length_4', 'passthrough_shell', 'layered_chain']
+2004: score=80, patterns=['cycle_length_4', 'passthrough_shell', 'layered_chain']
+3001: score=95, patterns=['cycle_length_5', 'passthrough_shell', 'round_amount_structuring', 'layered_chain']
+3002: score=65, patterns=['cycle_length_5', 'round_amount_structuring', 'layered_chain']
+9000: score=60, patterns=['passthrough_shell', 'temporal_clustering', 'fan_in']
+
+Threshold=60
+CYCLE=50 PASS=30 ANOMALY=20 TEMP=20 ROUND=15 DORM=15 FAN=10
