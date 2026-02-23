@@ -65,7 +65,7 @@ export default function UploadCSV({ onResult, onLoading, token }) {
             onResult(data);
         } catch (err) {
             console.error('Upload error:', err);
-            setError(err.message || 'Cannot connect to backend. Make sure the server is running on port 8000.');
+            setError(err.message || 'Cannot connect to backend. Make sure the server is running on port 1000.');
         } finally {
             onLoading(false);
         }
