@@ -16,7 +16,7 @@ import {
     TrendingUp, FileText, UserX,
 } from 'lucide-react';
 
-const API = import.meta.env.VITE_API_URL || '/api';
+const API = import.meta.env.VITE_API_URL ;
 const H = { fontFamily: 'Outfit, sans-serif' };
 const B = { fontFamily: 'Sora, sans-serif' };
 
