@@ -40,7 +40,7 @@ app = FastAPI(
 # ── CORS — allow frontend dev server ───────────────────────────────────
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["https://mulex-git-main-manobs-projects.vercel.app/"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
