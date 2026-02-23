@@ -33,7 +33,7 @@ export default function UserHistoryPage() {
     useEffect(() => {
         const fetchHistory = async () => {
             try {
-                const res = await fetch(`${API}/me/history`, {
+                const res = await fetch(`${API}/user/history`, {
                     headers: { Authorization: `Bearer ${user?.token}` },
                 });
                 if (res.ok) setHistory(await res.json());

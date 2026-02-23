@@ -40,25 +40,32 @@ export default function UploadCSV({ onResult, onLoading, token }) {
         formData.append('file', file);
 
         try {
-            const response = await axios.post(`${API_URL}/upload-csv`, formData, {
-                headers: {
-                    ...(token ? { Authorization: `Bearer ${token}` } : {}),
-                },
-                timeout: 120000,
+            const headers = {};
+            if (token) {
+                headers['Authorization'] = `Bearer ${token}`;
+            }
+
+            const response = await fetch(`${API_URL}/predict`, {
+                method: 'POST',
+                headers,
+                body: formData,
             });
-            onResult(response.data);
+
+            let data;
+            try {
+                data = await response.json();
+            } catch (e) {
+                throw new Error('Server returned an invalid response.');
+            }
+
+            if (!response.ok) {
+                throw new Error(data.detail || 'Upload failed. Please try again.');
+            }
+
+            onResult(data);
         } catch (err) {
             console.error('Upload error:', err);
-            let message = 'Upload failed. Please try again.';
-            if (err.response?.data?.detail) {
-                const detail = err.response.data.detail;
-                message = typeof detail === 'string' ? detail : JSON.stringify(detail);
-            } else if (err.code === 'ECONNABORTED') {
-                message = 'Request timed out. The dataset may be too large.';
-            } else if (!err.response) {
-                message = 'Cannot connect to backend. Make sure the server is running on port 8000.';
-            }
-            setError(message);
+            setError(err.message || 'Cannot connect to backend. Make sure the server is running on port 8000.');
         } finally {
             onLoading(false);
         }

@@ -300,7 +300,7 @@ def get_my_history(current_user: User = Depends(get_current_user), db: Session =
 #  CSV UPLOAD & ANALYSIS (PROTECTED)
 # ══════════════════════════════════════════════════════════════════════════
 
-@app.post("/upload-csv", response_model=AnalysisResult)
+@app.post("/predict", response_model=AnalysisResult)
 async def upload_csv(
     request: Request,
     file: UploadFile = File(...),
